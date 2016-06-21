@@ -1,0 +1,18 @@
+.img-responsive1 {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 31px;
+    width: 60%;
+}
+.img-responsive2 {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 16px;
+    width: 80%;
+}
+.service-icon {
+  background-color: #00CCCB;
+  border: grey;
+}

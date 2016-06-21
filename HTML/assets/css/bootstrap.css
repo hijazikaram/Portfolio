@@ -1125,6 +1125,13 @@ img {
   max-width: 100%;
   height: auto;
 }
+.1{
+		display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 31px;
+    width: 60%; 
+}
 .img-rounded {
   border-radius: 6px;
 }
