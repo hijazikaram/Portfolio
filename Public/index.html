@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" class="no-js">
+<html lang="en-US" class="no-js" ng-app="myPortfolio">
 	<head>
 
 		<!-- ==============================================
@@ -46,7 +46,7 @@
 
 	</head>
 
-	<body data-spy="scroll" data-target="#main-nav" data-offset="400">
+	<body data-spy="scroll" data-target="#main-nav" data-offset="400" ng-controller="mainCtrl">
 
 		<!--=== PAGE PRELOADER ===-->
 		<div id="page-loader"><span class="page-loader-gif"></span></div>
@@ -767,30 +767,30 @@
 
 						<!--=== Contact Form ===-->
 
-						<form id="contact-form" class="col-sm-6 col-md-offset-1 scrollimation fade-left" action="contact.php" method="post" novalidate>
+						<form id="contact-form" class="col-sm-6 col-md-offset-1 scrollimation fade-left" method="post" novalidate>
 
-							<div class="form-group">
+							<!-- <div class="form-group">
 								<div class="controls">
 									<input id="contact-name" name="contactName" class="form-control requiredField" type="text" data-error-empty="is required">
 									<label class="control-label" for="contact-name">Name</label>
 								</div>
-							</div><!-- End name input -->
+							</div> End name input -->
 
 							<div class="form-group">
 								<div class="controls">
-									<input id="contact-mail" name="email" class="form-control requiredField" type="email" data-error-empty="is required" data-error-invalid="is invalid">
-									<label class="control-label" for="contact-mail">Email</label>
+									<input id="contact-mail" ng-model="email.subjectField" name="Subject" class="form-control requiredField" type="Subject" data-error-empty="is required" >
+									<label class="control-label" for="contact-mail">Subject</label>
 								</div>
 							</div><!-- End email input -->
 
 							<div class="form-group">
 								<div class="controls">
-									<textarea id="contact-message" name="comments" class="form-control requiredField" rows="6" data-error-empty="is required"></textarea>
+									<textarea id="contact-message" ng-model="email.textField" name="comments" class="form-control requiredField" rows="6" data-error-empty="is required"></textarea>
 									<label class="control-label" for="contact-message">Message</label>
 								</div>
 							</div><!-- End textarea -->
 
-							<button name="submit" type="submit" class="btn" data-error-message="Please fill the required fields" data-sending-message="Sending Message" data-ok-message="Your Message has been sent!">Send It</button>
+							<button name="submit" ng-click="sendEmail(email)"type="submit" class="btn" data-error-message="Please fill the required fields" data-sending-message="Sending Message" data-ok-message="Your Message has been sent!">Send It</button>
 							<input type="hidden" name="submitted" id="submitted" value="true" />
 
 						</form><!-- End contact-form -->
@@ -871,19 +871,32 @@
 		<!-- ==============================================
 		SCRIPTS
 		=============================================== -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.9.1.min.js">\x3C/script>')</script>
-
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.9.1.min.js">\x3C/script>')</script> -->
+		 <script src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+	  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	  <script src="https://use.fontawesome.com/d37be5596c.js"></script>
+	  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.2.js"></script>
+	  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
+	  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+	  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	  <!-- <script type="text/javascript" src="./assets/images/slick-1.6.0/slick/slick.min.js"></script> -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.js" charset="utf-8"></script>
 		<script src="assets/js/libs/bootstrap.min.js"></script>
 		<script src="assets/js/jquery.easing.1.3.min.js"></script>
 		<script src="assets/js/waypoints.min.js"></script>
 		<script src="assets/js/jquery.easypiechart.js"></script>
-		<script src="assets/js/twitterFetcher_min.js"></script>
+		<!-- <script src="assets/js/twitterFetcher_min.js"></script> -->
 		<script src="assets/js/jquery.flexslider.min.js"></script>
 		<script src="assets/js/jquery.fitvids.js"></script>
 		<script src="assets/js/contact.js"></script>
 		<script src="assets/js/scripts.js"></script>
-
+		<script src="assets/js/scripts.js"></script>
+		<script src="./services/mainService.js"></script>
+		<script src="./controllers/mainCtrl.js"></script>
 	</body>
 
 </html>
