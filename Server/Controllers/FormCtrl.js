@@ -18,7 +18,7 @@ module.exports = {
 
     sendEmail: function(req, res, next) {
       smtpTransport.sendMail({  //email options
-        // from: "Domo Clone <domoclone@gmail.com>", // sender address.  Must be the same as authenticated user if using GMail.
+        from: "Portfolio <Portfolio@gmail.com>", // sender address.  Must be the same as authenticated user if using GMail.
         to: 'hijazikaram@gmail.com', // receiver
         subject: req.body.subjectField, // subject
         text: req.body.textField // body
