@@ -1542,6 +1542,11 @@ hr{
 .scrollimation.d1{
 	transition-delay:.3s;
 }
+.d98{
+	width: 45%;
+    margin-left: 27%;
+    margin-bottom: 12%;
+}
 
 .scrollimation.d2{
 	transition-delay:.6s;
@@ -1674,7 +1679,11 @@ hr{
 	.push-down{
 		margin-top:0;
 	}
-
+	.d98{
+		width: 40%;
+    margin-left: 30%;
+    margin-bottom: 16%;
+	}
 	#home{
 		min-height:810px;
 		margin-bottom:-64px;
@@ -1977,5 +1986,10 @@ hr{
     height: auto;
      margin: 31px;
      width: 60%;
+	}
+	.d98{
+		width: 50%;
+    margin-left: 25%;
+    margin-bottom: 43%;
 	}
 }
