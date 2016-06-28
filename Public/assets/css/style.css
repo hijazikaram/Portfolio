@@ -26,6 +26,7 @@
   -webkit-transition: opacity .3s ease-out;
 	transition: opacity .3s ease-out;
 	opacity:0.1;
+
 }
 .img-responsive2 {
     display: block;
@@ -50,4 +51,28 @@
   margin-left: 10px;
   visibility: hidden;
   border-radius: 45px;
+}
+@media (max-width:1499px){
+  #title{
+    margin-left: 25px;
+    text-align: center;
+    width: 130px;
+    padding: 10px;
+    position: absolute;
+    visibility: hidden;
+    border-radius: 45px;
+    margin-top: 13px;
+  }
+}
+@media (max-width:999px){
+  #title{
+    margin-left: 10px;
+    text-align: center;
+    width: 130px;
+    padding: 10px;
+    position: absolute;
+    visibility: hidden;
+    border-radius: 45px;
+    margin-top: 0px;
+  }
 }
