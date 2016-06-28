@@ -5,6 +5,28 @@
     margin: 31px;
     width: 60%;
 }
+.img-responsive1:hover + #title{
+	/*opacity:0.1;*/
+  color: #00CCCB;
+  background-color: black;
+  visibility: visible;
+}
+.img-responsive2:hover + #title{
+	/*opacity:0.1;*/
+  color: #00CCCB;
+  background-color: black;
+  visibility: visible;
+}
+.img-responsive1:hover{
+  opacity: 0.1;
+  -webkit-transition: opacity .3s ease-out;
+	transition: opacity .3s ease-out;
+}
+.img-responsive2:hover {
+  -webkit-transition: opacity .3s ease-out;
+	transition: opacity .3s ease-out;
+	opacity:0.1;
+}
 .img-responsive2 {
     display: block;
     max-width: 100%;
@@ -15,4 +37,17 @@
 .service-icon {
   background-color: #00CCCB;
   border: grey;
+}
+#title {
+  /* display: flex; */
+  /*color: black;
+  background-color: #00CCCB;*/
+  text-align: center;
+  width: 130px;
+  padding: 10px;
+  position: absolute;
+  /* display: none; */
+  margin-left: 10px;
+  visibility: hidden;
+  border-radius: 45px;
 }
